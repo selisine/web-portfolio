@@ -530,7 +530,12 @@ class IctukV5 extends Dictionary {
     "ofazhupo|close|V.|to move so as to bar passage through something|",
     "ozhupo|closed|Adj.|not open|",
     "tufoa|name|N.|a word or phrase that constitutes the distinctive designation of a person or thing|",
-    "akazhoba|late|Adj.|far advanced toward the close of the day or night|"
+    "akazhoba|late|Adj.|far advanced toward the close of the day or night|",
+    "shpotuho|music|N.|vocal/instrumental/mechanical sounds having rhythm/melody/harmony",
+    "shpotuhosh|song|N.|a short musical composition of words and music",
+    "shpotuuosh|instrument|N.|a device used to produce music",
+    "fotapuuosh|percussion,percussive instrument|N.|percussion instruments that form a section of a band or orchestra",
+    "shkapo|magic piano,crystal piano|N.|a musical instrument having 3 magic crystals each with 32 hammers each operated from a keyboard"
   ];
   
   invisible = ['/', '|', '<'];
