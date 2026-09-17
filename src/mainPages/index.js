@@ -531,11 +531,13 @@ class IctukV5 extends Dictionary {
     "ozhupo|closed|Adj.|not open|",
     "tufoa|name|N.|a word or phrase that constitutes the distinctive designation of a person or thing|",
     "akazhoba|late|Adj.|far advanced toward the close of the day or night|",
-    "shpotuho|music|N.|vocal/instrumental/mechanical sounds having rhythm/melody/harmony",
-    "shpotuhosh|song|N.|a short musical composition of words and music",
-    "shpotuuosh|instrument|N.|a device used to produce music",
-    "fotapuuosh|percussion,percussive instrument|N.|percussion instruments that form a section of a band or orchestra",
-    "shkapo|magic piano,crystal piano|N.|a musical instrument having 3 magic crystals each with 32 hammers each operated from a keyboard"
+    "shpotuho|music|N.|vocal/instrumental/mechanical sounds having rhythm/melody/harmony|",
+    "shpotuhosh|song|N.|a short musical composition of words and music|",
+    "shpotuposh|singer|N.|one that sings|",
+    "shpotuuosh|instrument|N.|a device used to produce music|",
+    "fotapuuosh|percussion,percussive instrument|N.|percussion instruments that form a section of a band or orchestra|",
+    "shkapo|magic piano,crystal piano|N.|a musical instrument having 3 magic crystals each with 32 hammers each operated from a keyboard|",
+    "shamba|shamba|N.|a Qatu delicacy of a fish wrapped in a thin bread and covered in a sweet sauce|"
   ];
   
   invisible = ['/', '|', '<'];
@@ -992,7 +994,9 @@ class Writing extends Blog {
     `d090626t0345|Boulder|Nothing has been working the way I wanted it to,\nEveryone tell me,\n"Oh it'll get better",\n"You're just in a rought spot",\n"You're still young",\nIt's the world's most politely optimistic boulder,\nbarreling towards me down a steepening hill,\nwhere my options are to tumble ferociously, or\nallow the boulder to finally take me,\ncrushing me with such a weight,\nthat my troubles are displaced, but\nmany find there to be just one option,\nto keep tumbling,\nto assume that the ever-enclosing boulder will just,\n"go away",\nto assume that there is an end to this hill,\nthat it won't eventually become so steep,\nthat it's nothing more than a cliff,\nwith no bottom,\nI once thought,\nthat the hill elevated once or twice, but\nit was a change so minimal,\nthe steepness consumed it`,
     `d090626t2317|Reminiscence of a Marigold|Despite our agreed-on distance,\nI still think of you,\nyour smell,\nyour touch,\nyour taste,\nAnd I know you think of me,\nmy smell,\nmy touch,\nmy taste,\nDo you think of me,\nwhen you think of him?\nwhen you smell him,\nwhen you touch him,\nwhen you taste him?\nDid you think of me,\nall those nights,\nyou lie on your back,\nlegs high in the air,\nwhile he gets your smell,\nwhile he gets your touch,\nwhile he gets your taste?`,
     `d090726t1940|To Midnight (Version 2)|In spite of my search,\nto quiet my dissonance,\nI compose my psyche,\n10 minutes to midnight\n\nI amelionate this prison,\nmolding this flesh and bone,\nto feel the warmth of a home,\n2 hours to midnight\n\nI talk to the stars,\nand listen to their beauty,\nto learn their tone,\n1 hour to midnight\n\nI search for a medley,\nfull of vibrance and pride,\nfeel it dance in my mind,\n30 minutes past midnight`,
-    `d090826t2129|Songbirds|Songbirds are born,\ngifted with a talent,\nto spread grace throughout,\nthe invisible air\n\nOne bird was born,\nwith no thought in its mind,\nbut to devour gravel,\nand squak for its life\n\nThe other birds abhor,\nthis gravel-stricken pest,\nthey didn't deserve this,\n"Get away from us!"\n\nThe bird quickly realized,\nit needs to fit in,\nit stops eating gravel,\nand sings from within\n\nBut the damage was done,\ntoo many rocks in its throat,\nthe weight of its voice,\nmade itself choke`
+    `d090826t2129|Songbirds|Songbirds are born,\ngifted with a talent,\nto spread grace throughout,\nthe invisible air\n\nOne bird was born,\nwith no thought in its mind,\nbut to devour gravel,\nand squak for its life\n\nThe other birds abhor,\nthis gravel-stricken pest,\nthey didn't deserve this,\n"Get away from us!"\n\nThe bird quickly realized,\nit needs to fit in,\nit stops eating gravel,\nand sings from within\n\nBut the damage was done,\ntoo many rocks in its throat,\nthe weight of its voice,\nmade itself choke`,
+    `d091626t1405|Strawberry|A strawberry is born,\nin a pale green tint,\nlacking saturation\n\nAs it grows,\nits shade glows,\ninto a bright red\n\nSome say it's vibrant,\ncolorful,\n"gifted" with beauty\n\nOver time,\nthe tint colors black,\nfull of mold and in the trash\n\nI am not a gardener`,
+    `d091626t2030|The Mirror|Pieces of a sacred rose embed themselves,\nin the skin of these sore fists\n\nI find I still see,\nthe lack of image my soul seeks\n\nLike dogs feasting on a savory carcass,\nI scratch the skin off me with my teeth\n\nI pull off every single piece of hair,\nthat this body decides to keep\n\nMy soul abandons this body,\nto frollic in a field that seeps pink\n\nLeaving nothing but a senseless husk,\nSeeking solutions but seldom succeeding\n\nForever will my concious seek,\nsurreal solace from the solid world\n\nAnd compare its insightful ideas,\nto the shit-show it sees`
   ];
 }
 
