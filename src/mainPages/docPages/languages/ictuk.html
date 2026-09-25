@@ -2,8 +2,8 @@
 <html>
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../styles.css"/>
-    <script src="../../../index.js"></script>
+    <link rel="stylesheet" href="../../styles.css"/>
+    <script src="../../index.js"></script>
     <title>Ictuk</title>
 </head>
 <body onload="dictionaryInit('ictukV5');">
@@ -13,14 +13,14 @@
                 <h1>Ictuk</h1>
             </div>
             <nav class="mainNav">
-                <a href="../../../index.html">Home</a>
-                <a href="#notice">Notice</a>
+                <a href="../../index.html">Home</a>
+                <!-- <a href="#notice">Notice</a> -->
                 <a href="#sounds">Sounds</a>
                 <a href="#writing">Writing</a>
                 <a href="#numbers">Numbers</a>
                 <a href="#grammar">Grammar</a>
-                <a href="../dictionaries/ictukV5DictionaryParser.html">Dictionary & Parser</a>
-                <a href="../examples/ictukV5Examples.html">Big Examples</a>
+                <a href="dictionaries/ictukDictPar.html">Dictionary & Parser</a>
+                <a href="examples/ictukExamples.html">Big Examples</a>
             </nav>
         </div>
     </header>
@@ -136,60 +136,61 @@
 		<tbody>
 		  <tr>
 			<td>Universe</td>
-			<td><a href="../../omi.html">Omi</a></td>
+			<td><a href="../omi.html">Omi</a></td>
 		  </tr>
 		  <tr>
 			<td>System</td>
-			<td><a href="../../systems/galus/galus.html">Galus</a></td>
+			<td><a href="../systems/galus/galus.html">Galus</a></td>
 		  </tr>
 		  <tr>
 			<td>Planet</td>
-			<td><a href="../../systems/galus/galus.html#cetus">Cetus</a></td>
+			<td><a href="../systems/galus/galus.html#cetus">Cetus</a></td>
 		  </tr>
           <tr>
             <td>Species</td>
-            <td><a href="../../species/vemachiaSapiens.html">Vemachia Sapiens</a></td>
+            <td><a href="../species/vemachiaSapiens.html">Vemachia Sapiens</a></td>
           </tr>
           <tr>
             <td>Nation</td>
-            <td><a href="../../nations/suko.html">Suko</a></td>
+            <td><a href="../nations/suko.html">Suko</a></td>
           </tr>
 		</tbody>
 	</table>
-    <h1 id="notice">Notice</h1>
+    <!-- Commenting out section until I want to work on this guide again -->
+    <!-- <h1 id="notice">Notice</h1>
     <p>
         This is a more technical sheet for Ictuk that can be used to reference certain rules and structures. 
         If this looks daunting and you would like more of an intro, I have created an <a href="../intros/ictukV5Intro.html">intro sheet</a>.
         <br><br>
         Interested in using this language with others? 
         Add "selisine" on <a href="https://discord.com/">Discord</a> to get into the server!
-    </p>
+    </p> -->
     <h1 id="sounds">Sounds</h1>
     <table>
-        <tbody>
+        <tbody> 
             <tr>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/p.ogg').play()">▶ p</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/t.ogg').play()">▶ t</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/k.ogg').play()">▶ k</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/f.ogg').play()">▶ f</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/p.ogg').play()">▶ p</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/t.ogg').play()">▶ t</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/k.ogg').play()">▶ k</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/f.ogg').play()">▶ f</button></td>
             </tr>
             <tr>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/sh.ogg').play()">▶ sh</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/zh.ogg').play()">▶ zh</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/h.ogg').play()">▶ h</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/u.ogg').play()">▶ u</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/sh.ogg').play()">▶ sh</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/zh.ogg').play()">▶ zh</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/h.ogg').play()">▶ h</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/u.ogg').play()">▶ u</button></td>
             </tr>
             <tr>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/o.ogg').play()">▶ o</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/a.ogg').play()">▶ a</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/ou.ogg').play()">▶ ou</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/b.ogg').play()">▶ b</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/o.ogg').play()">▶ o</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/a.ogg').play()">▶ a</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/ou.ogg').play()">▶ ou</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/b.ogg').play()">▶ b</button></td>
             </tr>
             <tr>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/ng.ogg').play()">▶ ng</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/mb.ogg').play()">▶ mb</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/q.ogg').play()">▶ q</button></td>
-                <td><button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/glottalStop.ogg').play()">▶ ʔ</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/ng.ogg').play()">▶ ng</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/mb.ogg').play()">▶ mb</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/q.ogg').play()">▶ q</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/glottalStop.ogg').play()">▶ ʔ</button></td>
             </tr>
         </tbody>
     </table>
@@ -342,7 +343,7 @@
         <br>
         <i>Kofafashtufta</i> ("I am good too")
     </p>
-    <img src="../../../resources/ictukV5/glyphs/breakdowns/kofafashtuftaBreakdown.gif">
+    <img src="../../resources/ictukV5/glyphs/breakdowns/kofafashtuftaBreakdown.gif">
     <p>
         Half height glyphs are special in that they both can 
         be placed next to the upper or lower half of 
@@ -465,7 +466,7 @@
     </p>
     <span class="draw" data-phrase="aa"></span>
     <br>
-    <button class="sound-btn" onclick="new Audio('../../../resources/ictukV5/sounds/aa.ogg').play()">▶ aa</button>
+    <button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/aa.ogg').play()">▶ aa</button>
     <h3>New Lines</h3>
     <p>
         The most common spacing between phrases that aren't stacked is 
@@ -1050,7 +1051,7 @@
         For example, "I want to sleep" becomes <i>akozhapofazhongukoshtuf</i> ("I want 
         sleeping").
     </p>
-    <img src="../../../resources/ictukV5/glyphs/breakdowns/akozhapofazhongukoshtufBreakdown.gif">
+    <img src="../../resources/ictukV5/glyphs/breakdowns/akozhapofazhongukoshtufBreakdown.gif">
     <br>
     <h3 id="#modal">Modal</h3>
     <p>
@@ -1082,7 +1083,7 @@
         <br>
         <i>Uktufngufoq kofafashoshushko</i> ("My computer is very good")
     </p>
-    <img src="../../../resources/ictukV5/glyphs/breakdowns/uktufngufoq kofafashoshushkoBreakdown.gif">
+    <img src="../../resources/ictukV5/glyphs/breakdowns/uktufngufoq kofafashoshushkoBreakdown.gif">
     <h2 id="otherGrammarRules">Other Rules</h2>
     <nav class="mainNav">
         <a href="#nonPresentTime">Non-Present Time</a>
