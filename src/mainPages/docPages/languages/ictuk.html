@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles.css"/>
+    <script src="../../index.js"></script>
+    <title>Ictuk</title>
+</head>
+<body onload="dictionaryInit('ictukV5');">
+    <header class="topBanner">
+        <div class="bannerContent">
+            <div class="siteName">
+                <h1>Ictuk</h1>
+            </div>
+            <nav class="mainNav">
+                <a href="../../index.html">Home</a>
+                <!-- <a href="#notice">Notice</a> -->
+                <a href="#sounds">Sounds</a>
+                <a href="#writing">Writing</a>
+                <a href="#numbers">Numbers</a>
+                <a href="#grammar">Grammar</a>
+                <a href="dictionaries/ictukDictPar.html">Dictionary & Parser</a>
+                <a href="examples/ictukExamples.html">Big Examples</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Glyph Defs -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+        <defs>
+            <g id="p">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+            </g>
+            <g id="b">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="100" x2="50" y2="100"/>
+            </g>
+            <g id="t">
+                <line x1="50" y1="0" x2="50" y2="100"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+            </g>
+            <g id="k">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="f">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+            </g>
+            <g id="sh">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="50"/>
+            </g>
+            <g id="zh">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+            </g>
+            <g id="h">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="50" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="u">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+                <line x1="50" y1="0" x2="50" y2="50"/>
+            </g>
+            <g id="o">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+            </g>
+            <g id="ou">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="50"/>
+            </g>
+            <g id="a">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="q">
+                <line x1="50" y1="0" x2="50" y2="50"/>
+                <line x1="50" y1="0" x2="0" y2="50"/>
+                <line x1="50" y1="50" x2="0" y2="100"/>
+            </g>
+            <g id="mb">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="ng">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="0"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id=".">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="?" transform="translate(0,100) scale(1,-1)">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="!" transform="translate(0,50)">
+                <line x1="0" y1="50" x2="0" y2="-50"/>
+                <line x1="0" y1="50" x2="50" y2="0"/>
+                <line x1="0" y1="-50" x2="50" y2="-50"/>
+            </g>
+            <g id="Cm" transform="translate(50,50) scale(-1,-1)">
+                <line x1="0" y1="50" x2="0" y2="-50"></line>
+                <line x1="0" y1="50" x2="50" y2="0"></line>
+                <line x1="0" y1="-50" x2="50" y2="-50"></line>
+            </g>
+            <g id=",">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+            </g>
+            <g id="Qu">
+                <line x1="50" y1="0" x2="0" y2="50"/>
+            </g>
+            <g id="(">
+                <line x1="50" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id=")">
+                <line x1="0" y1="0" x2="50" y2="50"/>
+                <line x1="50" y1="50" x2="0" y2="100"/>
+            </g>
+            <g id="S/">
+                <line x1="50" y1="0" x2="0" y2="100"/>
+		        <line x1="50" y1="0" x2="50" y2="100"/>
+            </g>
+            <g id="S|">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+            </g>
+        </defs>
+    </svg>
+    <table class="linkChain">
+		<tbody>
+		  <tr>
+			<td>Universe</td>
+			<td><a href="../omi.html">Omi</a></td>
+		  </tr>
+		  <tr>
+			<td>System</td>
+			<td><a href="../systems/galus/galus.html">Galus</a></td>
+		  </tr>
+		  <tr>
+			<td>Planet</td>
+			<td><a href="../systems/galus/galus.html#cetus">Cetus</a></td>
+		  </tr>
+          <tr>
+            <td>Species</td>
+            <td><a href="../species/vemachiaSapiens.html">Vemachia Sapiens</a></td>
+          </tr>
+          <tr>
+            <td>Nation</td>
+            <td><a href="../nations/suko.html">Suko</a></td>
+          </tr>
+		</tbody>
+	</table>
+    <!-- Commenting out section until I want to work on this guide again -->
+    <!-- <h1 id="notice">Notice</h1>
+    <p>
+        This is a more technical sheet for Ictuk that can be used to reference certain rules and structures. 
+        If this looks daunting and you would like more of an intro, I have created an <a href="../intros/ictukV5Intro.html">intro sheet</a>.
+        <br><br>
+        Interested in using this language with others? 
+        Add "selisine" on <a href="https://discord.com/">Discord</a> to get into the server!
+    </p> -->
+    <h1 id="sounds">Sounds</h1>
+    <table>
+        <tbody> 
+            <tr>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/p.ogg').play()">▶ p</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/t.ogg').play()">▶ t</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/k.ogg').play()">▶ k</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/f.ogg').play()">▶ f</button></td>
+            </tr>
+            <tr>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/sh.ogg').play()">▶ sh</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/zh.ogg').play()">▶ zh</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/h.ogg').play()">▶ h</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/u.ogg').play()">▶ u</button></td>
+            </tr>
+            <tr>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/o.ogg').play()">▶ o</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/a.ogg').play()">▶ a</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/ou.ogg').play()">▶ ou</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/b.ogg').play()">▶ b</button></td>
+            </tr>
+            <tr>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/ng.ogg').play()">▶ ng</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/mb.ogg').play()">▶ mb</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/q.ogg').play()">▶ q</button></td>
+                <td><button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/glottalStop.ogg').play()">▶ ʔ</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <sub>
+        Audio sourced from <a href="https://en.wikipedia.org/wiki/IPA_consonant_chart_with_audio">Wikipedia's IPA Chart</a>
+        and <a href="https://www.capyschool.com/en/reader">Capyschool</a>
+    </sub>
+    <h2 id="ipaCharts">IPA Charts</h2>
+    <sub>The first row has the locations for a human, and the 2nd row has the locations for an Ictuza.</sub>
+    <h3>Consonants (Pulmonic & Non-Pulmonic)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Alveolar</th>
+                <th>Velar</th>
+                <th colspan="3">Bilabial</th>
+                <th colspan="2">Velar</th>
+                <th colspan="2">Glottal</th>
+                <th colspan="2">Postalveolar</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td></td>
+            <td colspan="2">Mandibular</td>
+            <td colspan="2">Probosocial</td>
+            <td colspan="2">Probo-Pharyngeal</td>
+            <td>Mandi-Pharyngeal</td>
+            <td colspan="2">Pharyngeal</td>
+            <td colspan="2">Thoraxal</td>
+        </tr>
+        <tr>
+            <th>Plosive</th>
+            <td>t</td>
+            <td>k</td>
+            <td>p</td>
+            <td>b</td>
+            <td>ɓ</td>
+            <td>ɠ</td>
+            <td>kʼ</td>
+            <td>h</td>
+            <td>ʔ</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>Fricative</th>
+            <td></td>
+            <td></td>
+            <td>ɸ</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>ʃ</td>
+            <td>ʒ</td>
+        </tr>
+        </tbody>
+    </table>
+    <h3>Vowels</h3>
+    <table>
+        <tbody>
+            <tr>
+                <th>Close</th>
+                <td>u</td>
+            </tr>
+            <tr>
+                <th>Close-mid</th>
+                <td>o</td>
+            </tr>
+            <tr>
+                <th>Open-mid</th>
+                <td>ɔ</td>
+            </tr>
+            <tr>
+                <th>Open</th>
+                <td>ɑ</td>
+            </tr>
+        </tbody>
+    </table>
+    <h1 id="writing">Writing</h1>
+    <nav class="mainNav">
+        <a href="#alphabet">Alphabet</a>
+        <a href="#stacking">Stacking</a>
+        <a href="#punctuation">Punctuation</a>
+        <a href="#otherRules">Other Rules</a>
+    </nav>
+    <h2 id="alphabet">Alphabet</h2>
+    <p>
+        There are a total of 15 letters in Ictuk. Ictuk's 
+        alphabetical order originates from how much the sound resonated with 
+        their head. The order is applied in this table, left 
+        to right, top to bottom.
+    </p>
+    <table>
+        <tbody>
+            <tr>
+                <th><span class="draw" data-phrase="p"></span></th>
+                <th><span class="draw" data-phrase="t"></span></th>
+                <th><span class="draw" data-phrase="k"></span></th>
+                <th><span class="draw" data-phrase="f"></span></th>
+                <th><span class="draw" data-phrase="sh"></span></th>
+            </tr>
+            <tr>
+                <td>p</td>
+                <td>t</td>
+                <td>k</td>
+                <td>f</td>
+                <td>sh</td>
+            </tr>
+            <tr>
+                <td><span class="draw" data-phrase="zh"></span></td>
+                <td><span class="draw" data-phrase="h"></span></td>
+                <td><span class="draw" data-phrase="u"></span></td>
+                <td><span class="draw" data-phrase="o"></span></td>
+                <td><span class="draw" data-phrase="a"></span></td>
+            </tr>
+            <tr>
+                <td>zh</td>
+                <td>h</td>
+                <td>u</td>
+                <td>o</td>
+                <td>a</td>
+            </tr>
+            <tr>
+                <td><span class="draw" data-phrase="ou"></span></td>
+                <td><span class="draw" data-phrase="b"></span></td>
+                <td><span class="draw" data-phrase="ng"></span></td>
+                <td><span class="draw" data-phrase="q"></span></td>
+                <td><span class="draw" data-phrase="mb"></span></td>
+            </tr>
+            <tr>
+                <td>ou</td>
+                <td>b</td>
+                <td>ng</td>
+                <td>q </td>
+                <td>mb</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 id="stacking">Stacking</h2>
+    <p>
+        Stacking is an important part of speaking Ictuk. Stacking seperates 
+        words into groups, where each group is pronounced left to 
+        right, and each word in the group is pronounced top 
+        to bottom.        
+        <br>
+        <i>Kofafashtufta</i> ("I am good too")
+    </p>
+    <img src="../../resources/ictukV5/glyphs/breakdowns/kofafashtuftaBreakdown.gif">
+    <p>
+        Half height glyphs are special in that they both can 
+        be placed next to the upper or lower half of 
+        a full-height glyph, and because they can be stacked on 
+        top of each other relative to the word they are 
+        apart of. Both are stylistic choices that are up to 
+        the writer.    
+    </p>
+    <h3 id="primaryLine">Primary Line</h3>
+    <p>
+        Because Ictuk phrases are multiple levels, an invisible reference line 
+        was established as the "center" of the word or phrase, 
+        known as the primary line. It's typically where a noun 
+        or pronoun is.
+        <br>
+        In this case, the primary line is where <i>kofa</i> ("be") 
+        and <i>tuf</i> ("I") is, because <i>tuf</i> is the pronoun in 
+        the phrase.    
+    </p>
+    <span class="draw" data-phrase="0#hkofatuf 1#n//||fash -1//||ta"></span>
+    <h3 id="overlap">Overlap</h3>
+    <p>
+        Sometimes, words can overlap past the word they're stacking on 
+        or under. A spacer glyph can be added until the 
+        word is no longer overlapping. There is a short spacer 
+        glyph and a long spacer glyph.    
+    </p>
+    <span class="draw" data-phrase="S|"></span>
+    <span class="draw" data-phrase="S/"></span>
+    <h2 id="punctuation">Punctuation</h2>
+    <strong>Period</strong>
+    <p>
+        The period is placed after the final word in the phrase on the primary line.
+        <br>
+        <i>Kofafashtufta.</i> ("I am good too.")
+    </p>
+    <span class="draw" data-phrase="0kofatuf#h. 1#n//||fash -1//||ta"></span>
+    <br>
+    <strong>Question Mark</strong>
+    <p>
+        The question mark is placed before the first word and after the final word on the primary line.
+        <br>
+        <i>Kofafashbuta?</i> ("Are you good too?")
+    </p>
+    <span class="draw" data-phrase="0#h?#nkofabut#h? 1#n////|fash -1////|ta"></span>
+    <br>
+    <strong>Exclamation Mark</strong>
+    <p>
+        The exclamation mark is placed before the first word and after the final word on the primary line.
+        <br>
+        <i>Kofafashtufta!</i> ("I am good too!")
+    </p>
+    <span class="draw" data-phrase="0#h!#nkofatuf 1//||fash -1//||ta"></span>
+    <br>
+    <strong>Joke Mark</strong>
+    <p>
+        The joke mark is used to indicate something comedic or 
+        ironic where context isn't enough. It is placed before the 
+        first word on the primary line, while an exclamation point is placed at the end.
+        <br>
+        <i>!Kofaukoshtuf!</i> ("I'm dead!") 
+    </p>
+    <span class="draw" data-phrase="#hCm#nkofatuf! 1///||ukosh
+    "></span>
+    <br>
+    <strong>Comma</strong>
+    <p>
+        The comma is placed on the primary line as needed.
+        <br>
+        <i>Kofafashtuf, aa but?</i> ("I am good, and you?")
+    </p>
+    <span class="draw" data-phrase="0kofatuf#h,#n/aa/but? 1#n//||fash"></span>
+    <br>
+    <strong>Quotes</strong>
+    <p>
+        The starting quote is stacked above the first glyph in 
+        the quoted phrase, and the ending quote is stacked below 
+        the last glyph in the quoted phrase.
+        <br>
+        <i>"Kofafashtuf", ofazhpapfashoqposh.</i> ("'I am good', they said.")
+    </p>
+    <span class="draw" data-phrase="0kofatuf,/ofazhpapfashoqposh 1#hQu#n/||fash -1#h//||//Qu"></span>
+    <br>
+    <strong>Parenthesis</strong>
+    <p>
+        Parenthesis appear on every line of the word or phrase 
+        they are encapsulating. Both parenthesis have to align with the 
+        center of the line they are on.
+        <br>
+        <i>Kofaakozhobtuf (ofazhokofazhobtuf)</i> ("I'm tired (I didn't sleep)")
+    </p>
+    <span class="draw" data-phrase="0kofatuf/||//#h(#nofazhkofazhobtuf#h)#n 1//||akozhob/#h(#n//|o//////#h)#n"></span>
+    <h2 id="otherRules">Other Rules</h2>
+    <h3>Double Letters</h3>
+    <p>
+        If 2 of the same consonants are right next to 
+        each other, it becomes one consonant.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <td><i>Zhoubbut</i> (WRONG)</td>
+                <td><i>Zhoubut</i> (RIGHT)</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span class="draw" data-phrase="0zhou#hbb#nut"></span></td>
+                <td><span class="draw" data-phrase="0zhou#hb#nut"></span></td>
+            </tr>
+        </tbody>
+    </table>
+    <p>
+        This applies to stacked letters as well, except the consonants 
+        stay as they are, and only the pronunciation changes to 
+        one consonant.
+    </p>
+    <!-- TODO: Find a real example of this scenario -->
+    <p>
+        If 2 vowels are right next to each other, the 
+        pronunciation changes, adding a glottal stop between the vowels.
+        <br>
+        <i>Aa</i> ("And")
+    </p>
+    <span class="draw" data-phrase="aa"></span>
+    <br>
+    <button class="sound-btn" onclick="new Audio('../../resources/ictukV5/sounds/aa.ogg').play()">▶ aa</button>
+    <h3>New Lines</h3>
+    <p>
+        The most common spacing between phrases that aren't stacked is 
+        1 line, or more technically 125 pixels of space.
+        <br>
+        <i>'Nguuhop kofabut shou apa?' Ofazhpapfashoqtuf.</i> ("'How are you today?' I said.")
+        <br>
+        <i>'Kofafashtuf,' Ofazhpapfashoqposh.</i> ("'I'm good,' He said.")
+    </p>
+    <span class="draw" data-phrase="0nguuhop/kofabut/shou/apa?/fazhpapfashoqtuf. 1Qu//////////////////////o -1////////////////||/Qu"></span>
+    <span class="draw" data-phrase="1Qu/||fash/o 0kofatuf,/fazhpapfashoqposh. -1////||Qu"></span>
+    <h1 id="numbers">Numbers</h1>
+    <nav class="mainNav">
+        <a href="#baseNumbers">Base Numbers</a>
+        <a href="#tens">Tens</a>
+        <a href="#hundreds">Hundreds</a>
+        <a href="#thousands">Thousands</a>
+        <a href="#tenThousands">Ten Thousands</a>
+        <a href="#hundredThousands">Hundred Thousands</a>
+        <a href="#ordinance">Ordinance</a>
+    </nav>
+    <p>
+        Ictuza count in base 12, meaning every 12 numbers counted, 
+        it jumps one place. In English, we represent the 11 
+        and 12 in Base 12 as A and B respectively.
+    </p>
+    <strong>Stacking Order</strong>
+    <p>Numbers always stack above all other glyphs affecting the noun. </p>
+    <h2 id="baseNumbers">Base Numbers (0-B)</h2>
+    <table>
+        <tbody>
+            <tr>
+                <td><span class="draw" data-phrase="o"></span></td>
+                <td><span class="draw" data-phrase="u"></span></td>
+                <td><span class="draw" data-phrase="po"></span></td>
+                <td><span class="draw" data-phrase="ush"></span></td>
+            </tr>
+            <tr>
+                <td>o (0)</td>
+                <td>u (1)</td>
+                <td>po (2)</td>
+                <td>ush (3)</td>
+            </tr>
+            <tr>
+                <td><span class="draw" data-phrase="ak"></span></td>
+                <td><span class="draw" data-phrase="mba"></span></td>
+                <td><span class="draw" data-phrase="mbu"></span></td>
+                <td><span class="draw" data-phrase="fo"></span></td>
+            </tr>
+            <tr>
+                <td>ak (4)</td>
+                <td>mba (5)</td>
+                <td>mbu (6)</td>
+                <td>fo (7)</td>
+            </tr>
+            <tr>
+                <td><span class="draw" data-phrase="fu"></span></td>
+                <td><span class="draw" data-phrase="zho"></span></td>
+                <td><span class="draw" data-phrase="kap"></span></td>
+                <td><span class="draw" data-phrase="sh"></span></td>
+            </tr>
+            <tr>
+                <td>fu (8)</td>
+                <td>zho (9)</td>
+                <td>kap (A)</td>
+                <td>sh (B)</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 id="tens">Tens</h2>
+    <p>
+        All tens are represented with a "q" before the ones place.
+        <br>
+        <i>Q</i> ("10")
+    </p>
+    <span class="draw" data-phrase="q"></span>
+    <p>
+        <i>Qak</i> ("14")
+    </p>
+    <span class="draw" data-phrase="#hq#nak"></span>
+    <p>
+        For numbers above 1B, the number in the tens place 
+        gets put in front of q, represented by one of 
+        the base numbers. This applies to every following place above 
+        the ones place.
+        <br>
+        <i>Mbaqmba</i> ("55")
+    </p>
+    <span class="draw" data-phrase="#hmba#nqmba"></span>
+    <h2 id="hundreds">Hundreds</h2>
+    <p>
+        All hundreds are reprented with "mbok" before the tens place.
+        <br>
+        <i>Mbok</i> ("100")
+    </p>
+    <span class="draw" data-phrase="mbok"></span>
+    <p>
+        <i>Akmbokmbaqmbu</i> ("456")
+    </p>
+    <span class="draw" data-phrase="ak#hmbok#nmbaqmbu"></span>
+    <h2 id="thousands">Thousands</h2>
+    <p>
+        All thousands are represented with "pazh" before the hundreds place.
+        <br>
+        <i>Pazh</i> ("1,000")
+    </p>
+    <span class="draw" data-phrase="pazh"></span>
+    <p>
+        <i>Popazhushmbokakqmba</i> ("2345")
+    </p>
+    <span class="draw" data-phrase="po#hpazh#nushmbokakqmba"></span>
+
+    <h2 id="tenThousands">Ten Thousands</h2>
+    <p>
+        All ten thousands are represented with "ngpa" before the thousands 
+        place.
+        <br>
+        <i>Ngpa</i> ("10,000")
+    </p>
+    <span class="draw" data-phrase="ngpa"></span>
+    <p>
+        <i>Pongpaushpazhakmbokmbaqmbu</i> ("23,456")
+    </p>
+    <span class="draw" data-phrase="po#hngpa#nushpazhakmbokmbaqmbu"></span>
+    <h2 id="hundredThousands">Hundred Thousands</h2>
+    <p>
+        All hundred thousands are represented with "ngshop" before the ten 
+        thousands place.
+        <br>
+        <i>Ngshop</i>
+    </p>
+    <span class="draw" data-phrase="ngshop"></span>
+    <p>
+        <i>Pongshopushngpaakpazhmbambokmbuqfa</i> ("234,567")
+    </p>
+    <span class="draw" data-phrase="po#hngshop#nushngpaak|pazhmbambokmbuqfa"></span>
+    <h2 id="ordinance">Ordinance</h2>
+    <p>
+        The order of a group is indicated with a number 
+        and <i>fazh</i> stacked below the number.
+        <br>
+        <i>Kofaufazhposh, kofapofazhtuf, kofaushfazhposhozh.</i> ("He is in 1st, I am in 
+        2nd, she is in 3rd.")
+    </p>
+    <span class="draw" data-phrase="0kofaposh/kofatuf/kofaposhozh. 1#h//|/fazh//||||fazh//|/||fazh 2///|u///||/po/////ush"></span>
+    <h1 id="grammar">Grammar</h1>
+    <nav class="mainNav">
+        <a href="#adjectives">Adjectives</a>
+        <a href="#adverbs">Adverbs</a>
+        <a href="#nouns">Nouns</a>
+        <a href="#pronouns">Pronouns</a>
+        <a href="#prepositions">Prepositions</a>
+        <a href="#verbs">Verbs</a>
+        <a href="#otherGrammarRules">Other Rules</a>
+    </nav>
+    <h2 id="adjectives">Adjectives</h2>
+    <nav class="mainNav">
+        <a href="#determiners">Determiners</a>
+        <a href="#comparisonSuperlatives">Comparisons and Superlatives</a>
+    </nav>
+    <p>
+        Adjectives are words that can describe nouns and pronouns. 
+        All adjectives stack on top of what they affect with no specific order.
+        <i>Kofafashtuf.</i> ("I am good.")
+    </p>
+    <span class="draw" data-phrase="0kofatuf. 1#h//||fash"></span>
+    <h3 id="determiners">Determiners</h3>
+    <p>
+        Determiners in Ictuk describe a noun's relative quanity and definiteness. 
+        Both stack above and closest to the noun.
+    </p>
+    <strong>Articles</strong>
+    <p>
+        Articles describe whether a noun is singular (cat), plural (cats), 
+        indefinite (a cat), and definite (the cat). Articles precede all 
+        other determiners.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Singular</th>
+                <th>Plural</th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <th>Indefinite</th>
+            <td>u</td>
+            <td>uzh</td>
+        </tr>
+        <tr>
+            <th>Definite</th>
+            <td>tu</td>
+            <td>tuzh</td>
+        </tr>
+    </tbody>
+    </table>
+    <p><i>Tuonguhu ofazhkofanguhaposh.</i> ("The teacher was boring.")</p>
+    <span class="draw" data-phrase="0onguhu/ofazhkofaposh. 1#htu/////////||#nnguha"></span>
+    <h3 id="comparisonsSuperlatives">Comparisons and Superlatives</h3>
+    <strong>Comparisons</strong>
+    <p>
+        All comparisons are built on stacking <i>opapa</i>, for "more", on 
+        top of the comparing adjective. 
+        <br>
+        <i>Kofaopapafashtuf shap but.</i> ("I'm better (more good) than you.")
+    </p>
+    <span class="draw" data-phrase="0kofatuf/shap/but. 1#h//||fash 2//||opapa"></span>
+    <p>
+        In a scenario that needs better comparisons than the original, 
+        more can be stacked on as many times as needed.
+        <br>
+        <i>Kofaopapafashtuf shap but, at kofaopapaopapafashposh shap tuf.</i> ("I'm better (more 
+        good) than you, but he's even better (more more good) 
+        than me.") 
+    </p>
+    <span class="draw" data-phrase="0kofatuf/shap/but,/at/kofaposh/shap/tuf. 1//||fash//////////////#hfash 2//||opapa////////////#hopapa 3///////////////////||#hopapa"></span>
+    <strong>Superlatives</strong>
+    <p>
+        Superlatives show that something has an attribute at its most 
+        extreme. They are constructed the same way as comparisons, but 
+        instead use the word <i>opapazh</i> ("most"). There can't be 
+        more than one "most" stacked on an adjective. 
+    </p>
+    <h2 id="adverbs">Adverbs</h2>
+    <p>
+        Adverbs are words that modify or affect verbs, and they 
+        stack below the verb they affect at the lowest level.
+        <br>
+        <i>Fazhoukfazhatatuf?</i> ("Can I go too?")
+    </p>
+    <span class="draw" data-phrase="0fazhouktuf? -1fazha -2#hta"></span>
+    <h2 id="nouns">Nouns</h2>
+    <p>
+        Nouns are words that describe a person, place or thing.
+        <br>
+        <i>Tuonguhu ofazhkofanguhaposh.</i> ("The teacher was boring.")
+    </p>
+    <span class="draw" data-phrase="0#honguhu#n/ofazhkofaposh. 1tu/////////||nguha"></span>
+    <h2 id="pronouns">Pronouns</h2>
+    <nav class="mainNav">
+        <a href="#personalPronouns">Personal Pronouns</a>
+        <a href="#reflexivePronouns">Reflexive Pronouns</a>
+        <a href="#possessivePronouns">Possessive Pronouns</a>
+        <a href="#demonstrativePronouns">Demonstrative Pronouns</a>
+    </nav>
+    <p>
+        Pronouns are words that replace nouns, usually used for something 
+        that has already been mentioned, or to mention a/the speaker(s).
+    </p>
+    <h3 id="personalPronouns">Personal Pronouns</h3> 
+    <p>
+        Personal pronouns address the actor of the sentence, and are 
+        what attach to <a href="#verbs">verbs</a>. There are 8 personal pronouns 
+        in Ictuk.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="2">Singular</th>
+                <th colspan="2">Plural</th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <th>Type</th>
+            <th>Person</th>
+            <th>Thing</th>
+            <th>Person</th>
+            <th>Thing</th>
+        </tr>
+        <tr>
+            <th>1st Person</th>
+            <td>Tuf</td>
+            <td></td>
+            <td>Tuzh</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>2nd Person</th>
+            <td>But</td>
+            <td></td>
+            <td>Buzh</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>3rd Person</th>
+            <td>Posh</td>
+            <td>Osh</td>
+            <td>Pozh</td>
+            <td>Ozh</td>
+        </tr>
+        <tr>
+            <th>4th Person</th>
+            <td>Poshozh</td>
+            <td>Oshozh</td>
+            <td>Pozhozh</td>
+            <td>Ozhozh</td>
+        </tr>
+    </tbody>
+    </table>
+    <strong>4th Person?</strong>
+    <p>
+        4th person, or 3rd person obviative, is very similar to 
+        3rd person. It comes into play when talking about someone 
+        less central to the story, like "He (1) thought his 
+        (2) idea was good", where "his" is talking about someone 
+        in the 4th person. While it isn't inherently required, Ictuk 
+        lacks gender in its pronouns, which can make discernment from 
+        context more difficult.
+        <br>
+        <i>Ofazhnguhoposh ukposhozhnguho ofazhkofafashosh</i> ("He (1) thought his (2) idea was good")
+    </p>
+    <span class="draw" data-phrase="0ofazhnguhoposh/poshozhnguho/ofazhkofaosh 1|/////////|pozhozh||////////||fash 2/////////||uk"></span>
+    <strong>Pronouns as Objects</strong>
+    <p>
+        Pronouns can also be used as objects in sentences when 
+        they're not the subject of the verb. They are the 
+        same words as personal pronouns, which can be seen in 
+        a phrase like "I am good, and you?".
+        <br>
+        <i>Kofafashtuf, aa but?</i> ("I am good, and you?")
+    </p>
+    <span class="draw" data-phrase="0kofatuf,/aa/#hbut#n? 1//||fash"></span>
+    <h3 id="reflexivePronouns">Reflexive Pronouns</h3>
+    <p>
+        Reflexive pronouns address the speaker themselves, and stack a copy 
+        of the pronoun onto itself.
+        <br>
+        <i>Akozhapofazhozhoubtuf osh tuftuf!</i> ("I want to do it myself!")
+    </p>
+    <span class="draw" data-phrase="0akozhapozhoubtufS//osh/#htuf#n! 1////|//|#nfazho/||/#htuf"></span>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="2">Singular</th>
+                <th colspan="2">Plural</th>
+            </tr>
+        </thead>
+    <tbody>
+    <tr>
+        <th>Type</th>
+        <th>Person</th>
+        <th>Thing</th>
+        <th>Person</th>
+        <th>Thing</th>
+    </tr>
+    <tr>
+        <th>1st Person</th>
+        <td>Tuftuf</td>
+        <td></td>
+        <td>Tuzhtuzh</td>
+        <td></td>
+    </tr>
+    <tr>
+        <th>2nd Person</th>
+        <td>Butbut</td>
+        <td></td>
+        <td>Buzhbuzh</td>
+        <td></td>
+    </tr>
+    <tr>
+        <th>3rd Person</th>
+        <td>Poshposh</td>
+        <td>Oshosh</td>
+        <td>Pozhpozh</td>
+        <td>Ozhozh</td>
+    </tr>
+    <tr>
+        <th>4th Person</th>
+        <td>Poshozhposhozh</td>
+        <td>Oshozhoshozh</td>
+        <td>Pozhozhpozhozh</td>
+        <td>Ozhozhozhozh</td>
+    </tr>
+    </tbody>
+    </table>
+    <h3 id="possessivePronouns">Possessive Pronouns</h3>
+    <p>
+        Possessive pronouns are used to indicate the ownership of something 
+        or someone. In Ictuk, the word <i>uk</i> ("hook") is added 
+        to the top of the pronoun, then the full pronoun 
+        is added to the top of what is being possessed.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th colspan="2">Singular</th>
+                <th colspan="2">Plural</th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <th>Type</th>
+            <th>Person</th>
+            <th>Thing</th>
+            <th>Person</th>
+            <th>Thing</th>
+        </tr>
+        <tr>
+            <th>1st Person</th>
+            <td>Uktuf</td>
+            <td></td>
+            <td>Uktuzh</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>2nd Person</th>
+            <td>Ukbut</td>
+            <td></td>
+            <td>Ukbuzh</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>3rd Person</th>
+            <td>Ukposh</td>
+            <td>Ukosh</td>
+            <td>Ukpozh</td>
+            <td>Ukozh</td>
+        </tr>
+        <tr>
+            <th>4th Person</th>
+            <td>Ukposhozh</td>
+            <td>Ukoshozh</td>
+            <td>Ukpozhozh</td>
+            <td>Ukozhozh</td>
+        </tr>
+    </tbody>
+    </table>
+    <h3 id="demonstrativePronouns">Demonstrative Pronouns</h3>
+    <p>
+        Demonstrative pronouns point to or identify things that already have 
+        context in the sentence. Ictuk has 6 demonstrative pronouns.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                <th>Singular</th>
+                <th>Plural</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Near</th>
+                <td>Sho</td>
+                <td>Shozh</td>
+            </tr>
+            <tr>
+                <th>Far</th>
+                <td>Sha</td>
+                <td>Shazh</td>
+            </tr>
+            <tr>
+                <th>Abstract</th>
+                <td>Shou</td>
+                <td>Shouzh</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <strong>Abstract?</strong>
+    <p>
+        Abstract words in Ictuk are any intangible or conceptual object. 
+        Things like days, color, names, etc. would use <i>shou</i> or 
+        <i>shouzh</i>.
+    </p>
+    <h2 id="prepositions">Prepositions</h2>
+    <p>
+        Prepositions help show the relationship between words in a sentence. 
+        They stack on the highest point of the 2nd word 
+        in the prepositional phrase.
+        <br>
+        <i>Ofazhazhouktuzh atshaosh.</i> ("We went through it.")
+    </p>
+    <span class="draw" data-phrase="0ofazhazhouktuzh/osh. 1#h////////|atsha"></span>
+    <h2 id="verbs">Verbs</h2>
+    <nav class="mainNav">
+        <a href="#aspect">Aspect</a>
+        <a href="#tense">Tense</a>
+        <a href="#negation">Negation</a>
+        <a href="#root">Root</a>
+        <a href="#modal">Modal</a>
+        <a href="#subject">Subject</a>
+    </nav>
+    <p>
+        Verbs are synthesized in a particular way, as seen in 
+        this table.
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th colspan="3">Structure</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Aspect</td>
+                <td>Negation </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Tense</td>
+                <td>Root</td>
+                <td>Subject</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>Modal</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <h3 id="#aspect">Aspect</h3>
+    <p>
+        Aspect is how a verb extends through time. There are 
+        4 aspects: simple, progressive, perfect, and perfect progressive. In Ictuk, 
+        3 of these 4 aspects have a preposition that represents 
+        them.
+    </p>
+    <ul>
+        <li>Simple is just the action, like "sleep", and has no preposition.</li>
+        <li>
+            Progressive is a continuous action, like "sleeping", and is represented 
+            with "fazho", for "over".
+        </li>
+        <span class="draw" data-phrase="fazho"></span>
+        <li>
+            Perfect is the relation between an earlier action and a 
+            later time, like "has slept", and is represented with "kou", 
+            for "at".
+        </li>
+        <span class="draw" data-phrase="kou"></span>
+        <li>
+            Perfect progressive is like perfect, but as an ongoing action, 
+            like "has been sleeping", and is represented with "fazhouk", for 
+            "go".
+        </li>
+        <span class="draw" data-phrase="fazhouk"></span>
+    </ul>
+    <sub>
+        If there a visible aspect (i.e. not Simple) but no 
+        visible tense (i.e. Present), the aspect falls where the tense 
+        would be.
+    </sub>
+    <br>
+    <h3 id="#tense">Tense</h3>
+    <p>
+        Tense is when a verb happened. There are 3 tenses: 
+        present, past, and future.
+    </p>
+    <ul>
+        <li>
+            Present tense is a verb that is actively happening, like 
+            "sleeps", and has no additional word to represent it. 
+        </li>
+        <li>
+            Past tense is a verb that has already happened, like 
+            "slept", and is represented with <i>ofazh</i>.
+        </li>
+        <span class="draw" data-phrase="0fazh 1o"></span>
+        <li>
+            Future tense is a verb that will happen, like "will 
+            sleep", and is represented with <i>fazh</i>.		
+        </li>
+        <span class="draw" data-phrase="fazh"></span>
+    </ul>
+    <h3 id="#negation">Negation</h3>
+    <p>
+        Negation is when a verb isn't being done, 
+        like "not sleeping", and is represented with <i>o</i>.
+    </p>
+    <h3 id="#root">Root</h3>
+    <p>
+        The root is the action itself. Unlike English, there are no infinitives in Ictuk (e.g. "to sleep"). The auxilliary gets formatted in simple aspect and added to the front of the phrase, and the root gets formatted as progressive aspect. 
+        <br>
+        For example, "I want to sleep" becomes <i>akozhapofazhongukoshtuf</i> ("I want 
+        sleeping").
+    </p>
+    <img src="../../resources/ictukV5/glyphs/breakdowns/akozhapofazhongukoshtufBreakdown.gif">
+    <br>
+    <h3 id="#modal">Modal</h3>
+    <p>
+        Modality is what conveys the mood of a sentence. There 
+        are 4 types in Ictuk:
+    </p>
+    <ul>
+        <li>Possibility/potential ("could/would") is <i>fazha</i> ("with")</li>
+        <span class="draw" data-phrase="fazha"></span>
+        <li>Ability ("be able to","can") <i>atsha</i> ("through")</li>
+        <span class="draw" data-phrase="atsha"></span>
+        <li>Hypothetical ("were to") <i>"fazhku"</i> ("toward")</li>
+        <span class="draw" data-phrase="fazhku"></span>
+        <li>Obligation ("should", "ought to") <i>"akozhoq"</i> ("require")</li>
+        <span class="draw" data-phrase="akozhoq"></span>
+    </ul>
+    <sub>
+        Commands are formatted using the obligation modal (e.g. "Go!" becomes 
+        "You should go!")
+    </sub>
+    <br>
+    <h3 id="#subject">Subject</h3>
+    <p>
+        The subject is the actor of the verb, and is 
+        always a pronoun. When regular nouns are being used (e.g. 
+        "My computer is very good"), the noun stays seperate from 
+        the verb, but the subject word changes according to the 
+        noun.
+        <br>
+        <i>Uktufngufoq kofafashoshushko</i> ("My computer is very good")
+    </p>
+    <img src="../../resources/ictukV5/glyphs/breakdowns/uktufngufoq kofafashoshushkoBreakdown.gif">
+    <h2 id="otherGrammarRules">Other Rules</h2>
+    <nav class="mainNav">
+        <a href="#nonPresentTime">Non-Present Time</a>
+        <a href="#approximatorStacking">Approximator Stacking</a>
+    </nav>
+    <h3 id="nonPresentTime">Non-Present Time</h3>
+    <p>
+        Units of time can be modified to represent time that has passed or will pass, 
+        which uses the same structure as verb tenses: ofazh for the past and fazh for the future. 
+        The amount of time in this occurence is indicated by stacking a number on <i>apa</i>.     
+    </p>
+    <ul>
+        <li>
+            <i>Fazhuapa</i> ("1 day from now", "tomorrow")
+        </li>
+        <span class="draw" data-phrase="0fazhapa 1//|u"></span>
+        <li>
+            <i>Fazhfuapao</i> ("8 minutes from now")
+        </li>
+        <span class="draw" data-phrase="0fazhapao 1//|fu"></span>
+        <li>
+            <i>Ushkoofazhuapa</i> ("1 year before now", "last year")
+        </li>
+        <span class="draw" data-phrase="0ushkoofazhapa 1////||u"></span>
+    </ul>
+    <h3 id="approximatorStacking">Approximator Stacking</h3>
+    <p>
+        Colloquially, <i>fazh</i> can be stacked on top of <i>fazhuouk</i> ("almost") 
+        to indicate how close or similar something is to its 
+        approximation. There's not really a definitive measurement with how many 
+        <i>fazh</i>'s there are. The English equivalent to this is saying 
+        "really really really (however many "really"'s) close".
+        <br>
+        <i>Ofazhkofafazhfazhfazhfazhuoukposh, ofazhkofaushafoposh uaofazhapa.</i> ("They were almost there, just a second away.") 
+    </p>
+    <span class="draw" data-phrase="0ofazhkofaposh/shap,/ofazhkofaposh/aofazhapa. -1//|fazh///////////||u -2//|fazh -3//|fazh -4//|fazhuouk 1///////////////////////u"></span>
+    <h3 id="because">Because: <i>Fazh</i> and <i>Fazhko</i></h3>
+    <p>
+        Ictuk has 2 words to indicate reasoning: <i>fazh</i> for the 
+        factual or natural occurence of something (e.g. <i>Ofazhukoshposh fazh ofazhoashoposh</i> 
+        ("They died because they didn't eat")),
+    </p>
+    <span class="draw" data-phrase="ofazhukoshposh/fazh/ofazhashoposh 1//////////////||o"></span>
+    <p>
+        and <i>fazhko</i> for the conceptual or abstract reasoning of something 
+        (e.g. <i>Ngushoofashtuf fazhko ngushoofashbut</i> ("I feel bad because you feel 
+        bad")).
+    </p>
+    <span class="draw" data-phrase="ngushotuf/fazhko/ngushobut 1///fash///////||fash 1.6///o/////////||o"></span>
+</body>
+</html>

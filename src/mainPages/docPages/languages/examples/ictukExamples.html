@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../../index.js"></script>
+    <title>Ictuk Examples</title>
+</head>
+<body onload="dictionaryInit('ictukV5');">
+    <header class="topBanner">
+        <div class="bannerContent">
+            <div class="siteName">
+                <h1>Ictuk</h1>
+            </div>
+            <nav class="mainNav">
+                <a href="../../../index.html">Home</a>
+                <a href="../ictuk/ictukV5.html">Ictuk</a>
+				<a href="#format">Format</a>
+				<a href="#therapy">Therapy</a>
+            </nav>
+        </div>
+    </header>
+    <!-- Glyph Defs -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0">
+        <defs>
+            <g id="p">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+            </g>
+            <g id="b">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="100" x2="50" y2="100"/>
+            </g>
+            <g id="t">
+                <line x1="50" y1="0" x2="50" y2="100"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+            </g>
+            <g id="k">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="f">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+            </g>
+            <g id="sh">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="50"/>
+            </g>
+            <g id="zh">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+            </g>
+            <g id="h">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="50" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="u">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+                <line x1="50" y1="0" x2="50" y2="50"/>
+            </g>
+            <g id="o">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="0"/>
+            </g>
+            <g id="ou">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="50"/>
+            </g>
+            <g id="a">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="0" x2="50" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="q">
+                <line x1="50" y1="0" x2="50" y2="50"/>
+                <line x1="50" y1="0" x2="0" y2="50"/>
+                <line x1="50" y1="50" x2="0" y2="100"/>
+            </g>
+            <g id="mb">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="ng">
+                <line x1="0" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="0"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id=".">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="?" transform="translate(0,100) scale(1,-1)">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id="!" transform="translate(0,50)">
+                <line x1="0" y1="50" x2="0" y2="-50"/>
+                <line x1="0" y1="50" x2="50" y2="0"/>
+                <line x1="0" y1="-50" x2="50" y2="-50"/>
+            </g>
+			<g id="Cm" transform="translate(50,50) scale(-1,-1)">
+                <line x1="0" y1="50" x2="0" y2="-50"></line>
+                <line x1="0" y1="50" x2="50" y2="0"></line>
+                <line x1="0" y1="-50" x2="50" y2="-50"></line>
+            </g>
+            <g id=",">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+                <line x1="0" y1="50" x2="50" y2="50"/>
+            </g>
+            <g id="Qu">
+                <line x1="50" y1="0" x2="0" y2="50"/>
+            </g>
+            <g id="(">
+                <line x1="50" y1="0" x2="0" y2="50"/>
+                <line x1="0" y1="50" x2="50" y2="100"/>
+            </g>
+            <g id=")">
+                <line x1="0" y1="0" x2="50" y2="50"/>
+                <line x1="50" y1="50" x2="0" y2="100"/>
+            </g>
+            <g id="S/">
+                <line x1="50" y1="0" x2="0" y2="100"/>
+		        <line x1="50" y1="0" x2="50" y2="100"/>
+            </g>
+            <g id="S|">
+                <line x1="0" y1="0" x2="0" y2="100"/>
+            </g>
+        </defs>
+    </svg>
+	<h1 id="format">Format</h1>
+    <p>
+        Romanized Ictuk [English Translation] <i>(Literal Translation)</i>
+        <br>
+        Glyphs
+    </p>
+	<h1 id="therapy">Therapy from <i>Tick, Tick, Boom!</i></h1>
+    <a href="https://genius.com/Andrew-garfield-and-vanessa-hudgens-therapy-lyrics">Original Lyrics</a>
+	<p>
+		(zhoub) [JON] <i>(Jon)</i>
+		<br>
+		ngushoofashtuf, fako ngushoofashbut [I feel bad, that you feel bad] <i>(feel not bad I, that feel bad you)</i>
+		<br>
+		fazhkoutuf fazhongushoofashtuf, fazhkoubut fazhongushoofashbut [About me feeling bad, about you feeling bad] <i>(about I over feel not good I, about you over feel not good you)</i>
+		<br>
+		fazhkounguosh ofazhopunguhotuf, fazhkounguosh ofazhopunguhobut [About what I said, about what you said] <i>(about what past say I, about what past say you)</i>
+		<br>
+		fazhkoutuf fazhooshpotatuf ushponguho [About me not being able to share a feeling] <i>(about I over not share I a feeling)</i>
+	</p>
+	<br>	 
+	<span class="draw" data-phrase="(zhoub)"></span>
+	<br><br>
+	<span class="draw" data-phrase="ngushotuf,/fako/ngushobut 1///fash////////|fash 1.6///o//////////|o"></span>
+	<br><br>
+	<span class="draw" data-phrase="tuf//fazhongushotuf//but//fazhongushobut 1fazhkou//////||fash/fazhkou///////fash 1.6o/////////|o/////////////||o"></span>
+	<br><br>
+	<span class="draw" data-phrase="nguosh/ofazhpunguhotuf,/nguosh/ofazhopunguhobut 1fazhkou////////////fazhkou"></span>
+	<br><br>
+	<span class="draw" data-phrase="tuf//fazhokofatufazhoshpota/shponguho 1fazhkou///////////////u -1///////|o -1.6///////|atsha"></span>
+	<br><br>
+	<p>
+		(kambasha) [KARESSA] <i>(Karessa)</i>
+		<br>
+		oupaqo ofazhnguhotuf fako ofazhnguhobut [If I thought that what you thought] <i>(if past think I that past think you)</i>
+		<br>
+		ofazhkofaosh fako kouofazhnguhotuf fazhkouktufnguho fazhokofazhouk ushpot [Was that I hadn't thought about sharing my thoughts] <i>(past be it that at past think I about my thought over become a share)</i>
+		<br>
+		fazhoupaqo uktufshponguho fazhkuukbutshponguho, fazhkuuktufshponguho [Then my reaction to your reaction, to my reaction] <i>(then my reaction, to your reaction, to my reaction)</i>
+		<br>
+		fazhoukofazhzhpangoshpapa [Would have been more revealing] <i>(over past reveal it more)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(kambasha)"></span>
+	<br><br>
+	<span class="draw" data-phrase="oupaqo/ofazhnguhotuf/fako/nguosh//ofazhnguhobut"></span>
+	<br><br>
+	<span class="draw" data-phrase="ofazhkofaosh/fako/ofazhnguhotuf/nguho/fazhokofazhouk/shpot 1////////////kou////////uktuf//////////||u 2/////////////////////|fazhkou"></span>
+	<br><br>
+	<span class="draw" data-phrase="fazhoupaqo/shponguho/shponguho,/shponguho 1////////|uktuf///ukbut////uktuf 2///////////////||fazhku////||fazhku"></span>
+	<br><br>
+	<span class="draw" data-phrase="ofazh//zhpangosh 1fazhouk -1////|opapa"></span>
+	<br><br>
+	<p>
+		(zhoub) [JON] <i>(Jon)</i>
+		<br>
+		ofazhhapotuf akozh fako ofazhhapofazhabut akozh [I was afraid that you'd be afraid] <i>(past have I fear that past have with you fear)</i>
+		<br>
+		oupaqo ofazhopunguhotuf fazhkubut fako ofazhhapotuf akozh ukzhupapshopaa [If I told you that I was afraid of intimacy] <i>(if past say I to you that past have I fear of intimacy)</i>
+		<br>
+		oupaqo ohapobut uofashosh fazhauktufofashosh [If you don't have a program with my problem] <i>(if not have you a not good thing with my not good thing)</i>
+		<br>
+		tuofashosh kofaoshfashofashu akozhotufposh [Maybe the problem's simply co-dependency] <i>(the not good thing be it maybe just co-dependency)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(zhoub)"></span>
+	<br><br>
+	<span class="draw" data-phrase="kofazhhapotuf/akozh/fako/ofazhhapobut/akozh -1////////////////////|fazha"></span>
+	<br><br>
+	<span class="draw" data-phrase="oupaqo/ofazhopunguhotuf/but//fako/ofazhhapotuf/akozh/zhupapshopaa 1/////////////////||fazhku/////////////////|uk"></span>
+	<br><br>
+	<span class="draw" data-phrase="oupaqo/hapobut/osh////osh 1//////o/////||ofash/ofash 1.6////////////||u 2/////////////||////uktuf 3/////////////////||fazha"></span>
+	<br><br>
+	<span class="draw" data-phrase="osh////kofaosh//akozhotufposh 1ofash 2tu -1/////fashofash -2.2/////u"></span>
+	<br><br>
+	<p>
+		(kambasha) [KARESSA] <i>(Karessa)</i>
+		<br>
+		fash, nguhoqtuf, fako shoufazh nguhoqbut [Yes, I know, that now you know] <i>(yes, know I, that this time know you)</i>
+		<br>
+		fako ofazhonguhoqtuf, fako ofazhonguhoqbut [That I didn't know, that you didn't know] <i>(that past know I, that past know you)</i>
+		<br>
+		fako ngufazh ofazhopunguhotuf, 'o,' ofazhnguhunguhotuf, 'fash, nguhoqtuf' [That when I said, "No," I meant, "Yes, I know"] <i>(that when past say I, 'no,' past intend I, 'yes, know I')</i>
+		<br>
+		aa fako shoufazh nguhoqtuf fako ofazhnguhoqbut, fako ofazhnguhoqtuf ofazhpapshopaabut tuf [And that now I know that you knew, that I knew you adored me] <i>(and that this time know I that past know you, that past know I past love you me)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(kambasha)"></span>
+	<br><br>
+	<span class="draw" data-phrase="fash,/nguhoqtuf,fako/fazh/nguhoqbut 1/////////////////|shou"></span>
+	<br><br>
+	<span class="draw" data-phrase="fako/ofazhnguhoqtuf,/fako/ofazhnguhoqbut 1//////||o//////////////||o"></span>
+	<br><br>
+	<span class="draw" data-phrase="fako/ngufazh/ofazhopunguhotuf,/o,/ofazhnguhunguhotuf,/fash,/nguhoqtuf 1/////////////////////|Qu////////////////|Qu -1//////////////////////|Qu//////////////////////////|Qu"></span>
+	<br><br>
+	<span class="draw" data-phrase="aa/fako/fazh/nguhoqtuf/fako/ofazhnguhoqbut,/fako/ofazhnguhoqtuf/fazhpapshopaabut/tuf 1///////|shou"></span>
+	<br><br>
+	<p>
+		(zhoub) [JON] <i>(Jon)</i>
+		<br>
+		ofazhkofaofashtuf fazhko [I was wrong to] <i>(past be not good I for)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(zhab)"></span>
+	<br><br>
+	<span class="draw" data-phrase="ofazhkofatuf 1/////fash 1.6/////o"></span>
+	<br><br>
+	<p>
+		(kaousha)
+		<br>
+		fazhoopunguhotuf ofazhkofaofashbut fazhko [Say you were wrong to] <i>(over say I past be not good you for)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(kambasha)"></span>
+	<br><br>
+	<span class="draw" data-phrase="fazhoopunguhotuf/ofazhkofabut//|fazhko 1/////////////////|ofash"></span>
+	<br><br>
+	<p>
+		(zhoub) [JON] <i>(Jon)</i>
+		<br>
+		fazhoopunguhotuf ofazhkofaofashtuf fazhkou [Say I was wrong about] <i>(over say I past be not good I for)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(zhoub)"></span>
+	<br><br>
+	<span class="draw" data-phrase="fazhoopunguhotuf/ofazhkofatuf//fazhkou 1////////////////||fash 1.6////////////////||o"></span>
+	<br><br>
+	<p>
+		(kambasha) [KARESSA] <i>(Karessa)</i>
+		<br>
+		fazhokofaofashbut [You being wrong] <i>(over be not good you)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(kambasha)"></span>
+	<br><br>
+	<span class="draw" data-phrase="fazhokofabut 1//////||fash 1.6//////||o"></span>
+	<br><br>
+	<p>
+		(zhoub) [JON] <i>(Jon)</i>
+		<br>
+		ngufazh ofazhopunguhobut fako [When you rang to say that] <i>(when past say you that)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(zhoub)"></span>
+	<br><br>
+	<span class="draw" data-phrase="ngufazh/ofazhopunguhobut/fako"></span>
+	<br><br>
+	<p>
+		(kambasha) [KARESSA] <i>(Karessa)</i>
+		<br>
+		fazhofazhapouktuf tushka ofashkofaofashosh [The ring was the wrong thing to bring] <i>(over bring I the crystal past be not good it)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(kambasha)"></span>
+	<br><br>
+	<span class="draw" data-phrase="fazhofazhapouktuf/shka/ofashkofaosh 1/|/////////tu///////||fash 1.6/|//////////////////||o"></span>
+	<br><br>
+	<p>
+		(zhoub) [JON] <i>(Jon)</i>
+		<br>
+		oupaqo ofazhnguhunguhotuf nguosh ofazhopunguhotuf [If I meant what I said] <i>(if past intend I what past say I)</i>
+		<br>
+		ngufazh ofazhopunguhotuf, 'shka ofazhshpozhobozh tuf' [When I said, "Rings bored me"] <i>(when past say I, 'crystals past bore it (2+) I')</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(zhoub)"></span>
+	<br><br>
+	<span class="draw" data-phrase="oupaqo/ofazhnguhunguhotuf/nguosh/ofazhopunguhotuf"></span>
+	<br><br>
+	<span class="draw" data-phrase="ngufazh/ofazhopunguhotuf,/shka/ofazhshpozhobozh/tuf 1////////////////////|Qu -1//////////////////////////////Qu"></span>
+	<br><br>
+	<p>
+		(zhoub aa kaousha)
+		<br>
+		okofanguhoshazhtuf fako ofazhkofazhouknguhoshazhbut ngufazh ofazhkofazhouknguhoshazhtuf [I'm not mad that you got mad when I got mad] <i>(not be angry I that past become angry you when past become angry I)</i>
+		<br>
+		ngufazh ofazhopunguhobut ukoshakozhoqtuf [When you said I should go drop dead] <i>(when past say you die require I)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(zhoub/aa/kambasha)"></span>
+	<br><br>
+	<span class="draw" data-phrase="kofatuf////|fako/ofazhkofazhoukbut////|ngufazh/ofazhkofazhouktuf 1o/||nguhoshazh/////////////nguhoshazh////////////||nguhoshazh"></span>
+	<br><br>
+	<span class="draw" data-phrase="ngufazh/ofazhopunguhobut/ukoshtuf -1////////////////|akozhoq"></span>
+	<br><br>
+	<p>
+		(zhoub) [JON] <i>(Jon)</i>
+		<br>
+		oupaqu kofafazhkutuf but aa kouofazhoubtuf nguosh kouofazhobtuf [If I were you and I'd done what I'd done] <i>(if be toward I you and at past do I what at past do I)</i>
+		<br>
+		zhoubfazhatuf nguosh ofazhoubut [I'd do what you did] <i>(do at I what past do you)</i>
+		<br>
+		ngufazh ofazhshputuf but tushka [When I gave you the ring] <i>(when past give I you the crystal)</i>
+		<br>
+		fazhanguosh kouofazhopunguhotuf [Having said what I said] <i>(with what at past say I)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(zhoub)"></span>
+	<br><br>
+	<span class="draw" data-phrase="oupaqu/kofatuf/but/aa/ofazhoubtuf/nguosh/ofazhoubtuf -1//////fazhku 1//////////////////kou/////////|kou"></span>
+	<br><br>
+	<span class="draw" data-phrase="zhoubtuf/nguosh/ofazhoubut -1fazha"></span>
+	<br><br>
+	<span class="draw" data-phrase="ngufazh/ofazhshputuf/but/shka 1///////////////|tu"></span>
+	<br><br>
+	<span class="draw" data-phrase="nguosh/ofazhopunguhotuf 1fazha||kou"></span>
+	<br><br>
+	<p>
+		(zhoub, (kambasha) [KARESSA] <i>(Karessa)</i>)
+		<br>
+		ngushoofashtuf, fako ngushoofashbut (ngushoofashtuf) [I feel bad, that you feel bad (I feel badly)] <i>(feel not good I, that feel not good you (feel not good I))</i>
+		<br>
+		fazhkoutuf fazhongushoofashtuf, fazhkoubut fazhongushoofashbut (fazhkoubut) [About me feeling bad, about you feeling bad (About you)] <i>(about me over feel not good I, about you over feel not good you (about you))</i>
+		<br>
+		fazhkounguosh ofazhopunguhotuf, fazhkounguosh ofazhopunguhobut (fazhongushoofashbut fazhkoutuf) [About what I said, about what you said (Feeling badly about me)] <i>(about what past say I, about what past say you (over feel not good you about me))</i>
+		<br>
+		fazhkoutuf fazhokofaoatshatufazhoshpota ushponguho (fazhongushoofashtuf fazhkoubut) [About me not being able to share a feeling (Feeling badly about you)] <i>(about me over be not through I over share a feeling (over feel not good I about you))</i>
+	</p>
+	<br>	 
+	<span class="draw" data-phrase="(zhoub)"></span>
+	<br><br>
+	<span class="draw" data-phrase="ngushotuf,/fako/ngushobut/(ngushotuf/) 1///fash////////|fash|(///fash) 1.6///o//////////|o//////|o"></span>
+	<br><br>
+	<span class="draw" data-phrase="tuf//fazhongushotuf//but//fazhongushobut/|(but/|) 1fazhkou//////||fash/fazhkou///////fash||(fazhkou) 1.6o/////////|o/////////////||o"></span>
+	<br><br>
+	<span class="draw" data-phrase="nguosh/ofazhpunguhotuf,/nguosh/ofazhopunguhobut/(fazhongushobut||) 1fazhkou////////////fazhkou////////////|(//////|fash) 1.6///////////////////////////////////////o"></span>
+	<br><br>
+	<span class="draw" data-phrase="tuf//fazhokofatufazhoshpota/shponguho/(fazhongushotuf//but/|) 1fazhkou///////////////u//////|(//////|fash/fazhkou) -1///////|o -1.6///////|atsha 1.6/////////////////////////////////|o"></span>
+	<br><br>
+	<p>
+		ofazhnguhotuf (oupaqo ofazhnguhotuf fako ofazhnguhobut) [I thought (If I thought that what you thought)] <i>(past think I (if past think I that past think you))</i>
+		<br>
+		ofazhnguhobut (ofazhkofaosh fako kouofazhnguhotuf fazhkouktufnguho fazhokofazhoukozh ushpot) [You thought (Was that I hadn't thought about sharing my thoughts)] <i>(past think you (past be it that at past think I about my thoughts over become it (2+) a share))</i>
+		<br>
+		ofazhngushotuf upapafazhupapa (fazhoupaqo uktufshponguho fazhkuukbutshponguho, fazhkuuktufshponguho) [I reacted shallowly (Then my reaction to your reaction, to my reaction)] <i>(past react I less low (then my reaction to your reaction, to my reaction))</i>
+		<br>
+		ngufazh ofazhngushotuf fazhkubut (kouofazhpangfazhaopapaosh) [When I reacted to you (Would have been more revealing)] <i>(when past react I to you (at past reveal more it))</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="ofazhnguhotuf/(oupaqo/ofazhnguhotuf/fako/nguosh//ofazhnguhobut)"></span>
+	<br><br>
+	<span class="draw" data-phrase="ofazhnguhobut/(ofazhkofaosh/fako/ofazhnguhotuf/nguho/fazhokofazhoukozh/shpot) 1/////////||(////////////kou////////uktuf///////////|u//|) 2/////////||(/////////////////////|fazhkou///||///////////||)"></span>
+	<br><br>
+	<span class="draw" data-phrase="ofazhngushotuf/fazhupapa/(fazhoupaqo/shponguho/shponguho,/shponguho) 1////////|upapa///|(////////|uktuf///ukbut////uktuf//) 2||////////////////(///////////////||fazhku////||fazhku//||)"></span>
+	<br><br>
+	<span class="draw" data-phrase="ngufazh/ofazhngushotuf/but//|(ofazhpangosh||) 1////////////||fazhku/(//kou///||) -1/////////////////|(//fazha/||)"></span>
+	<p>
+		okofanguhoshazhtuf, ofazhkofazhouknguhoshazhbut (okofanguhoshazhtuf fako ofazhkofazhouknguhoshazhbut ngufazh ofazhkofazhouknguhoshazhtuf) [I'm not mad, you got mad (I'm not mad that you got mad that I got mad)] <i>(not be angry I, past become angry you (not become angry I that past become angry you that past become angry I))</i>
+		<br>
+		ukoshakozhoqtuf (ngufazh ofazhopunguhobut ukoshakozhoqtuf) [Go drop dead (When you said I should go drop dead)] <i>(die require I (when past say you die require I))</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="kofatuf,///|ofazhkofazhoukbut///|/(kofatuf////|fako/ofazhkofazhoukbut////|ngufazh/ofazhkofazhouktuf///||) 1o||/nguhoshazh////////||nguhoshazh/(o/||nguhoshazh/////////////nguhoshazh////////////||nguhoshazh)"></span>
+	<br><br>
+	<span class="draw" data-phrase="ukoshtuf/(ngufazh/ofazhopunguhobut/ukoshtuf) -1akozhoq/(////////////////|akozhoq)"></span>
+	<br><br>
+	<p>
+		oupaqu kofafazhkutuf but aa kouofazhoubtuf nguosh kouofazhobtuf (oupaqu kofafazhkutuf but) [If I were you and I'd done what I'd done (If I were you)] <i>(if be toward I you and at past do I what at past do I (if be toward I you))</i>
+		<br>
+		zhoubfazhatuf nguosh ofazhoubut (oa okofatuf but) [I'd do what you did when I gave you the ring (But I'm not you)] <i>(do with I what past do you (but not be I you))</i>
+		<br>
+		fazhanguosh kouofazhopunguhotuf (ofazhopungotuf nguosh ofazhopungotuf) [Having said what I said (Said what I said)] <i>(with what at past say I (past say I what past say I))</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="oupaqu/kofatuf/but/aa/ofazhoubtuf/nguosh/ofazhoubtuf/(oupaqu/kofatuf/but) -1//////fazhku/////////////////////////||(//////fazhku////|) 1//////////////////kou/////////|kou"></span>
+	<br><br>
+	<span class="draw" data-phrase="zhoubtuf/nguosh/ofazhoubut/(oa/kofatuf/but) -1fazha 1///////////////|(///o///////)"></span>
+	<br><br>
+	<span class="draw" data-phrase="nguosh/ofazhopunguhotuf/(ofazhopunguhotuf/nguosh/ofazhopunguhotuf) 1fazha||kou"></span>
+	<br><br>
+	<p>
+		(zhoub) [JON] <i>(Jon)</i>
+		<br>
+		oa shoufazh kofaosh opuouputuzhupo [But now it's out in the open] <i>(but this time be it out in the open)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(zhoub)"></span>
+	<br><br>
+	<span class="draw" data-phrase="oa/fazh/kofaosh/zhupo 1///shou//////||tu 2///////////||oupu 3///////////||opu"></span>
+	<br><br>
+	<p>
+		(kambasha) [KARESSA] <i>(Karessa)</i>
+		<br>
+		shoufazh kofaosh ooupuktuzhfazhukupapsho [Now it's off our chest] <i>(this time be it off our chest)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(kambasha)"></span>
+	<br><br>
+	<span class="draw" data-phrase="fazh/kofaosh/fazhukupapsho 1shou//////||uktuzh 2////////||ooup"></span>
+	<br><br>
+	<p>
+		(zhoub aa kambasha) [JON & KARESSA] <i>(Jon & Karessa)</i>
+		<br>
+		shoufazh kofaosh tuakfazhafazhapa [Now it's 4 a.m.] <i>(this time be it the 4th hour)</i>
+		<br>
+		aa fazhofazhfazhapotuzh shpupapa fazhuapa [And we have therapy tomorrow] <i>(and over time get we help 1 day from now)</i>
+		<br>
+		zhupshooatshatuzh fazhko kofaushkoakazhobaosh [It's too late to screw] <i>(fuck not through we because be very late it)</i>
+		<br>
+		kofazhobakozhoqutuzh [So let's just get some rest] <i>(sleep require just we)</i>
+	</p>
+	<br>
+	<span class="draw" data-phrase="(zhoub/aa/kambasha)"></span>
+	<br><br>
+	<span class="draw" data-phrase="fazh/kofaosh/afazhapa 1shou//////||fazh 2////////||ak 3////////||tu"></span>
+	<br><br>
+	<span class="draw" data-phrase="aa/fazhfazhapotuzh/shpupapa/fazhapa 1///fazho//////////////|u"></span>
+	<br><br>
+	<span class="draw" data-phrase="zhupshotuzh/fazhko/kofaosh -1o//////////ushko -1.6atsha 1//////////////|akazhoba"></span>
+	<br><br>
+	<span class="draw" data-phrase="kofazhobakozhoqtuzh -1akozhoq -2u"></span>
+	<br><br>
+</body>
+</html>
