@@ -108,6 +108,11 @@
                 <line x1="0" y1="50" x2="50" y2="0"/>
                 <line x1="0" y1="-50" x2="50" y2="-50"/>
             </g>
+            <g id="Cm" transform="translate(50,50) scale(-1,-1)">
+                <line x1="0" y1="50" x2="0" y2="-50"></line>
+                <line x1="0" y1="50" x2="50" y2="0"></line>
+                <line x1="0" y1="-50" x2="50" y2="-50"></line>
+            </g>
             <g id=",">
                 <line x1="0" y1="0" x2="0" y2="100"/>
                 <line x1="0" y1="50" x2="50" y2="50"/>
@@ -373,14 +378,9 @@
     <span class="draw" data-phrase="S|"></span>
     <span class="draw" data-phrase="S/"></span>
     <h2 id="punctuation">Punctuation</h2>
-    <p> 
-        Punctuation can be stacked on itself to amplify its meaning.
-    </p>
     <strong>Period</strong>
     <p>
-        The period can be placed wherever it fits best, as 
-        long as it remains on the primary line and doesn't 
-        obstruct other glyphs.
+        The period is placed after the final word in the phrase on the primary line.
         <br>
         <i>Kofafashtufta.</i> ("I am good too.")
     </p>
@@ -388,24 +388,34 @@
     <br>
     <strong>Question Mark</strong>
     <p>
-        The question mark follows the same rules as the period.
+        The question mark is placed before the first word and after the final word on the primary line.
         <br>
         <i>Kofafashbuta?</i> ("Are you good too?")
     </p>
-    <span class="draw" data-phrase="0kofabut#h? 1#n///|fash -1//||ta"></span>
+    <span class="draw" data-phrase="0#h?#nkofabut#h? 1#n////|fash -1////|ta"></span>
     <br>
     <strong>Exclamation Mark</strong>
     <p>
-        The exclamation has to align with the center of the primary 
-        line.
+        The exclamation mark is placed before the first word and after the final word on the primary line.
         <br>
-        <i>"Kofafashtufta!</i> ("I am good too!")
+        <i>Kofafashtufta!</i> ("I am good too!")
     </p>
-    <span class="draw" data-phrase="0kofatuf#h! 1#n//||fash -1//||ta"></span>
+    <span class="draw" data-phrase="0#h!#nkofatuf 1//||fash -1//||ta"></span>
+    <br>
+    <strong>Joke Mark</strong>
+    <p>
+        The joke mark is used to indicate something comedic or 
+        ironic where context isn't enough. It is placed before the 
+        first word on the primary line, while an exclamation point is placed at the end.
+        <br>
+        <i>!Kofaukoshtuf!</i> ("I'm dead!") 
+    </p>
+    <span class="draw" data-phrase="#hCm#nkofatuf! 1///||ukosh
+    "></span>
     <br>
     <strong>Comma</strong>
     <p>
-        The comma follows the same rules as the exclamation point.
+        The comma is placed on the primary line as needed.
         <br>
         <i>Kofafashtuf, aa but?</i> ("I am good, and you?")
     </p>
@@ -429,7 +439,7 @@
         <br>
         <i>Kofaakozhobtuf (ofazhokofazhobtuf)</i> ("I'm tired (I didn't sleep)")
     </p>
-    <span class="draw" data-phrase="0kofatuf/||//(ofazhkofazhobtuf) 1//||akozhob/(//|o//////)"></span>
+    <span class="draw" data-phrase="0kofatuf/||//#h(#nofazhkofazhobtuf#h)#n 1//||akozhob/#h(#n//|o//////#h)#n"></span>
     <h2 id="otherRules">Other Rules</h2>
     <h3>Double Letters</h3>
     <p>
@@ -456,7 +466,6 @@
         one consonant.
     </p>
     <!-- TODO: Find a real example of this scenario -->
-    <!-- <span class="draw" data-phrase=""></span> -->
     <p>
         If 2 vowels are right next to each other, the 
         pronunciation changes, adding a glottal stop between the vowels.
@@ -601,7 +610,7 @@
     <p>
         <i>Pongshopushngpaakpazhmbambokmbuqfa</i> ("234,567")
     </p>
-    <span class="draw" data-phrase="po#hngshop#nushngpaakpazhmbambokmbuqfa"></span>
+    <span class="draw" data-phrase="po#hngshop#nushngpaak|pazhmbambokmbuqfa"></span>
     <h2 id="ordinance">Ordinance</h2>
     <p>
         The order of a group is indicated with a number 

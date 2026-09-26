@@ -537,7 +537,9 @@ class IctukV5 extends Dictionary {
     "shpotuuosh|instrument|N.|a device used to produce music|",
     "fotapuuosh|percussion,percussive instrument|N.|percussion instruments that form a section of a band or orchestra|",
     "shkapo|magic piano,crystal piano|N.|a musical instrument having 3 magic crystals each with 32 hammers each operated from a keyboard|",
-    "shamba|shamba|N.|a Qatu delicacy of a fish wrapped in a thin bread and covered in a sweet sauce|"
+    "shamba|shamba|N.|a Qatu delicacy of a fish wrapped in a thin bread and covered in a sweet sauce|",
+    "shpukosh|kill|V.|to deprive of life|",
+    "shpukozh|killer|N.|one that kills|"
   ];
   
   invisible = ['/', '|', '<'];
@@ -545,12 +547,12 @@ class IctukV5 extends Dictionary {
   thin = ['|', 'zh', 'S|'];
   bottomThin = ['p','?'];
   topSlant = ['sh','ou','a'];
-  bottomSlant = ['k','.','!'];
+  bottomSlant = ['k','.'];
   backBottomThin = ['t'];
-  backBottomSlant = ['ng','a','mb','k'];
+  backBottomSlant = ['ng','a','mb','k','!'];
   short = ['u','o','sh','ou','f','Qu','zh'];
   wide = [];
-  double = ['sh', 'zh', 'mb', 'ou', 'ng', 'Qu','S/', 'S|'];
+  double = ['sh', 'zh', 'mb', 'ou', 'ng', 'Qu','S/', 'S|','Cm'];
 
   constructor(className) {
     super(className);
